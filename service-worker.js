@@ -23,7 +23,19 @@ if ('serviceWorker' in navigator) {
 */
 
 	});
-	
+
+
+navigator.serviceWorker.ready.then(function(reg) {
+  reg.pushManager.getSubscription().then(function(subscription) {
+    subscription.unsubscribe().then(function(successful) {
+  		console.log("You've successfully unsubscribed");
+    }).catch(function(e) {
+  		console.log("Unsubscription failed");
+    })
+  })        
+});
+
+
   }).catch(function(err) {
     // registration failed :(
     console.log('ServiceWorker registration failed: ', err);
