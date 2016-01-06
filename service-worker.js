@@ -9,6 +9,7 @@ if ('serviceWorker' in navigator) {
 		console.log("subscription.subscriptionId: ", subscription.subscriptionId);
 		console.log("subscription.endpoint: ", subscription.endpoint);
 
+/*
 		// Save the subscription Id - Fetch API FTW!
 		var url = 'https://deanhume.azurewebsites.net/push/SaveSubscription?subscriptionId=' + subscription.subscriptionId;
 		fetch(url, {
@@ -19,7 +20,8 @@ if ('serviceWorker' in navigator) {
 		}).catch(function(err) {
 			console.log('There was an issue saving the subscription details: ', err);
 		});
-		
+*/
+
 	});
 	
   }).catch(function(err) {
