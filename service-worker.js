@@ -24,7 +24,7 @@ if ('serviceWorker' in navigator) {
 
 	});
 
-
+/*
 navigator.serviceWorker.ready.then(function(reg) {
   reg.pushManager.getSubscription().then(function(subscription) {
     subscription.unsubscribe().then(function(successful) {
@@ -34,7 +34,7 @@ navigator.serviceWorker.ready.then(function(reg) {
     })
   })        
 });
-
+*/
 
   }).catch(function(err) {
     // registration failed :(
