@@ -40,7 +40,8 @@ self.addEventListener('push', function(event) {
   event.waitUntil(
     self.registration.showNotification(title, {
       'body': 'The Message',
-      'icon': 'icon.png'
+      'icon': 'icon.png',
+	  'vibrate': [300, 100, 400]
     }));
 });
 
