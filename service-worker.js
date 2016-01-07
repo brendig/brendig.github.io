@@ -9,6 +9,8 @@ if ('serviceWorker' in navigator) {
 		console.log("subscription.subscriptionId: ", subscription.subscriptionId);
 		console.log("subscription.endpoint: ", subscription.endpoint);
 
+		register();
+
 /*
 		// Save the subscription Id - Fetch API FTW!
 		var url = 'https://deanhume.azurewebsites.net/push/SaveSubscription?subscriptionId=' + subscription.subscriptionId;
@@ -53,6 +55,7 @@ function register() {
 
 function registerCallback(regId) {
   registrationId = regId;
+  console.log("registrationId: ", registrationId);
 
 }
 
