@@ -9,7 +9,8 @@ if ('serviceWorker' in navigator) {
 		console.log("subscription.subscriptionId: ", subscription.subscriptionId);
 		console.log("subscription.endpoint: ", subscription.endpoint);
 
-		register();
+		var senderId = '561046146208';
+		chrome.gcm.register([senderId], registerCallback);
 
 /*
 		// Save the subscription Id - Fetch API FTW!
@@ -45,13 +46,6 @@ navigator.serviceWorker.ready.then(function(reg) {
 }
 
 
-function register() {
-  var senderId = '561046146208';
-  chrome.gcm.register([senderId], registerCallback);
-
-  // Prevent register button from being click again before the registration
-  // finishes.
-}
 
 function registerCallback(regId) {
   registrationId = regId;
