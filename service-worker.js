@@ -42,6 +42,20 @@ navigator.serviceWorker.ready.then(function(reg) {
   });
 }
 
+
+function register() {
+  var senderId = '561046146208';
+  chrome.gcm.register([senderId], registerCallback);
+
+  // Prevent register button from being click again before the registration
+  // finishes.
+}
+
+function registerCallback(regId) {
+  registrationId = regId;
+
+}
+
 self.addEventListener('push', function(event) {  
 	debugger;
   console.log('Received a push message', event);
